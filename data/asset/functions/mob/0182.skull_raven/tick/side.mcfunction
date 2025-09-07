@@ -13,8 +13,8 @@
 
 # motion
     data modify storage lib: Argument.VectorMagnitude set value 1.2
-    execute if entity @s[tag=!Random] facing entity @p[gamemode=!spectator] eyes rotated ~80 ~ run function lib:motion/
-    execute if entity @s[tag= Random] facing entity @p[gamemode=!spectator] eyes rotated ~-80 ~ run function lib:motion/
+    execute if entity @s[tag=!Random] facing entity @p[gamemode=!spectator] eyes rotated ~60 ~ run function lib:motion/
+    execute if entity @s[tag= Random] facing entity @p[gamemode=!spectator] eyes rotated ~-60 ~ run function lib:motion/
     data remove storage lib: Argument
 
 # リセット
