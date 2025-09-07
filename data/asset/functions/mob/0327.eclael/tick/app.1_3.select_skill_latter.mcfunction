@@ -40,7 +40,7 @@
     execute if score @s 93.ActionCount matches 2.. run scoreboard players reset @s 93.ActionCount
 
 # スキルtag
-data modify storage asset:context this.CurSkill set value "FieldSlash"
+#data modify storage asset:context this.CurSkill set value "FieldSlash"
     execute if data storage asset:context this{CurSkill:Idle} run tag @s add 93.Skill.Latter.Idle
     execute if data storage asset:context this{CurSkill:FieldSlash} run tag @s add 93.Skill.FieldSlash
     execute if data storage asset:context this{CurSkill:Fall} run tag @s add 93.Skill.Fall
