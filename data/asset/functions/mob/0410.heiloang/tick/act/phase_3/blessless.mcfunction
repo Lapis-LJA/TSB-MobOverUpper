@@ -8,19 +8,19 @@
     execute if score @s BE.ActCount matches 1 run tag @s add BE.Skill.CallServants
 
 # 待機
-    execute if score @s BE.ActCount matches 2 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 10
+    execute if score @s BE.ActCount matches 2 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 1
 
 # テルツェット・サクセッション
     execute if score @s BE.ActCount matches 3 run tag @s add BE.Skill.Ter.Succ.Start
 
 # 待機
-    execute if score @s BE.ActCount matches 4 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 5
+    execute if score @s BE.ActCount matches 4 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 1
 
 # テルツェット・プルガトリオ
     execute if score @s BE.ActCount matches 5 run tag @s add BE.Skill.Ter.Purg.Start
 
 # 待機
-    execute if score @s BE.ActCount matches 6 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 5
+    execute if score @s BE.ActCount matches 6 as @e[type=item_display,tag=BE.ModelRoot,sort=nearest,limit=1] run scoreboard players set @s BE.Idle.Count 1
 
 # テルツェット・ラグナレク
     execute if score @s BE.ActCount matches 7 run tag @s add BE.Skill.Ter.Rag.Start
