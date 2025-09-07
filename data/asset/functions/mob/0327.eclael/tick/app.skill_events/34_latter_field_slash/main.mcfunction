@@ -2,7 +2,7 @@
 #
 # 
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/attack_0
+# @private
 
 # 中心点に移動
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/animation_2
@@ -30,6 +30,7 @@
 
 # 攻撃
     execute if score @s 93.AnimationTimer matches 121 store result storage asset:context this.Random int 1 run random value 0..3
+        #execute if score @s 93.AnimationTimer matches 121 run data modify storage asset:context this.Random set value 4
         # 二重三角形 外→中
         execute if data storage asset:context this{Random:0} if score @s 93.AnimationTimer matches 121 if predicate api:global_vars/difficulty/min/3_blessless rotated ~ 0 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
         execute if data storage asset:context this{Random:0} if score @s 93.AnimationTimer matches 123 if predicate api:global_vars/difficulty/min/3_blessless rotated ~120 0 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
@@ -55,10 +56,17 @@
     # 新パターン2
         execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 121 rotated ~45 0 positioned ^ ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
         execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 123 rotated ~135 0 positioned ^ ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
-        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 169 rotated ~0 0 positioned ^ ^-2 ^14 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
-        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 171 rotated ~90 0 positioned ^ ^-2 ^14 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
-        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 173 rotated ~180 0 positioned ^ ^-2 ^14 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
-        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 175 rotated ~270 0 positioned ^ ^-2 ^14 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 169 rotated ~0 0 positioned ^ ^-2 ^6 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 171 rotated ~90 0 positioned ^ ^-2 ^6 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 173 rotated ~180 0 positioned ^ ^-2 ^6 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:3} if score @s 93.AnimationTimer matches 175 rotated ~270 0 positioned ^ ^-2 ^6 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+    # 新パターン3
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 121 rotated ~ 0 positioned ^ ^ ^12 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 123 rotated ~ 0 positioned ^ ^ ^0 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 125 rotated ~ 0 positioned ^ ^ ^-12 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 171 rotated ~90 0 positioned ^ ^-2 ^12 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 173 rotated ~90 0 positioned ^ ^-2 ^0 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
+        execute if data storage asset:context this{Random:4} if score @s 93.AnimationTimer matches 175 rotated ~90 0 positioned ^ ^-2 ^-12 run function asset:mob/0327.eclael/tick/app.skill_events/34_latter_field_slash/attack_0
 
 # 無敵
     execute if score @s 93.AnimationTimer matches 34 run function asset:mob/0327.eclael/tick/app.general/invulnerable/start

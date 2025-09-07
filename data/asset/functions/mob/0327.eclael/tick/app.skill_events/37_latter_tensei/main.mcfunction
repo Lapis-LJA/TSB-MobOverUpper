@@ -2,7 +2,7 @@
 #
 # 
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/attack_0
+# @private
 
 # 中心点に移動
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/37_latter_tensei/animation_1
